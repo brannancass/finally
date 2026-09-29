@@ -3,5 +3,17 @@
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "playwright@claude-plugins-official": true
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "(echo '# Changes Review'; echo 'Generated: '$(date); echo ''; git log -1 --oneline 2>/dev/null || echo 'No commits found'; echo ''; echo '## Changes:'; git diff HEAD~1..HEAD 2>/dev/null || echo 'No changes since last commit') > REVIEW.md"
+          }
+        ]
+      }
+    ]
   }
 }
