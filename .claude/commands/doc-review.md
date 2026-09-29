@@ -1,0 +1,1 @@
+Review the documentation file in the planning file called $ARGUMENTS and add questions, clafications or feedback to a new section at the end along with any opportunities to simplify.
